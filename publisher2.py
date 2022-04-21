@@ -13,7 +13,6 @@ client.connect("mqtt.eclipseprojects.io")
 
 while True:
     randNumber=randrange (5,50)
-    # client.publish("Temperature",randNumber)
     client.publish("Temperature",payload=str(randNumber)+","+"temperature_outside")
     if randNumber < 33 and randNumber >16:
         status="perfect temperature"
