@@ -16,7 +16,7 @@ while True:
     randNumber=randrange (12,30)
     client.publish("Temperature",payload=str(randNumber)+","+"temperature_inside")
     
-    # client.publish("Temperature",randNumber)
+  
     
 
     if randNumber < 25 and randNumber >18:
