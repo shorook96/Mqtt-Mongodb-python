@@ -9,15 +9,8 @@ col=db["temperature"]
 def on_message(client,userdata,message):
     info=message.payload.decode("utf-8").split(",")
     print(info)
-    # print("recieved temperature is ",str(message.payload.decode("utf-8")))
     col.insert_one({"temperature":info[0],"sender":info[1]})
     
-
-    # print(info[0])
-    # print()
-
-
-
 client = mqtt.Client("smartphone")
 client.connect("mqtt.eclipseprojects.io")
 
